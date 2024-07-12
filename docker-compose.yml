@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  produto:
+    build:
+      context: ./produto
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - backend
+
+  cliente:
+    build:
+      context: ./cliente
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+
+  entrega:
+    build:
+      context: ./entrega
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - backend
+
+  pedido:
+    build:
+      context: ./pedido
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - backend
+
+networks:
+  backend:

@@ -1,0 +1,29 @@
+### Variables
+
+### Buscar todos
+GET http://localhost:8083/produtos
+
+### Buscar o Produto por ID
+GET http://localhost:8083/produtos/1
+
+### Inserir o Produto 1
+POST http://localhost:8083/produtos
+content-type: application/json
+
+{
+  "nome": "Iphone",
+  "quantidade": 10,
+  "preco": 10.0,
+  "dataAtualizacao": "2024-05-19"
+}
+
+### Inserir o Produto 2
+POST http://localhost:8083/produtos
+content-type: application/json
+
+{
+  "nome": "Apple Watch",
+  "quantidade": 10,
+  "preco": 5.0,
+  "dataAtualizacao": "2024-05-19"
+}

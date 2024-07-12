@@ -1,0 +1,43 @@
+### Variables
+
+### Buscar todos
+GET http://localhost:8082/pedidos
+
+### Buscar o Pedido por ID
+GET http://localhost:8082/pedidos/1
+
+### Inserir o Pedido 1
+POST http://localhost:8082/pedidos
+content-type: application/json
+
+{
+  "clienteId": 1,
+  "produtos": [
+    {
+      "produtoId": 1,
+      "quantidade": 10
+    },
+    {
+      "produtoId": 2,
+      "quantidade": 5
+    }
+  ],
+  "valorTotal": 150.0,
+  "dataCriacao": "2022-12-01"
+}
+
+### Inserir o Pedido 2
+POST http://localhost:8082/pedidos
+content-type: application/json
+
+{
+  "clienteId": 2,
+  "produtos": [
+    {
+      "produtoId": 2,
+      "quantidade": 5
+    }
+  ],
+  "valorTotal": 150.0,
+  "dataCriacao": "2022-12-01"
+}
